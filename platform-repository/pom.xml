@@ -8,24 +8,20 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>platform-web</artifactId>
+    <artifactId>platform-repository</artifactId>
 
     <properties>
-        <start-class></start-class>
+        
     </properties>
 
 
 
     <dependencies>
-        <!--<dependency>
-            <groupId>com.season</groupId>
-            <artifactId>platform-web</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
+        
     </dependencies>
 
     <build>
-        <finalName>platform-web</finalName>
+        <finalName>platform-repository</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
