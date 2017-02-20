@@ -15,13 +15,18 @@
     </properties>
 
 
-
     <dependencies>
         <!--<dependency>
             <groupId>com.season</groupId>
             <artifactId>platform-web</artifactId>
             <version>${project.version}</version>
         </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>
