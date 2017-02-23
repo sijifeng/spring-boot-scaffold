@@ -1,4 +1,30 @@
 spring:
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    excluded-view-names:
+    template-resolver-order:
+  datasource:
+    url: jdbc:mysql://localhost:3307/restful?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: sijifeng
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: true
+  init-db: true
+  jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+        naming:
+          strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
   redis:
     database: 0
     host: 127.0.0.1
@@ -31,5 +57,5 @@ security:
 
 upload:
   #Disk upload
-  work-folder-name: /Users/zhangxd/files #文件存储路径
+  work-folder-name: /Users/jiyc/files #文件存储路径
   access-url: http://127.0.0.1:8090 #文件访问地址，可使用反向代理
