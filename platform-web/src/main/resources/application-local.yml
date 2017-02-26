@@ -11,7 +11,7 @@ spring:
     excluded-view-names:
     template-resolver-order:
   datasource:
-    url: jdbc:mysql://localhost:3307/restful?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://localhost:3307/springboot-scaffold?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: sijifeng
     driver-class-name: com.mysql.jdbc.Driver

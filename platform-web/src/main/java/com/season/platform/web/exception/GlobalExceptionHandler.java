@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(value = CommonException.class)
 	@ResponseBody
 	public ErrorInfo<String> jsonErrorHandler(HttpServletRequest req, CommonException e) throws Exception {
-		ErrorInfo<String> r = new ErrorInfo<>();
+		ErrorInfo<String> r = new ErrorInfo();
 		r.setMessage(e.getMessage());
 		r.setCode(ErrorInfo.ERROR);
 		r.setData("platform-web system Exception");
