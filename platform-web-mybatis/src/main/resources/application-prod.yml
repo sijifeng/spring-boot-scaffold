@@ -50,14 +50,10 @@ server:
     accesslog:
       debug: true #请求响应数据调试
 
-management:
-  security:
-      enabled: false
-
-
-logging:
-  config:
-      classpath: logback.xml
+security:
+  jwt:
+    secret: k09BQnaF
+    expiration: 604800 #7Days
 
 upload:
   #Disk upload

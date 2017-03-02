@@ -23,6 +23,7 @@
         <module>platform-common</module>
         <module>platform-repository</module>
         <module>platform-web</module>
+		<module>platform-web-mybatis</module>
     </modules>
 
 

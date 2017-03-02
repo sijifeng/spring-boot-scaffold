@@ -29,7 +29,7 @@ public class SysUserController extends BaseController {
 	private SysUserService sysUserService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
-	public JsonResponseEntity list(Map<String, Object> param) {
+	public JsonResponseEntity list(@RequestBody Map<String, Object> param) {
 		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
 		try {
 			//Preconditions.checkNotNull(param.getToken(), "token:" + PARAM_IS_NULL);
@@ -37,7 +37,7 @@ public class SysUserController extends BaseController {
 			logger.info("param size :" + MapUtils.getIntValue(param, "size", 2));
 			logger.info("param username :" + MapUtils.getString(param, "username"));
 
-			List<SysUser> userList = sysUserService.selectList();
+			List<SysUser> userList = sysUserService.selectList(null);
 			getSuccessResponse(jsonResponseEntity, userList);
 		} catch (Throwable e) {
 			logger.error(e.getMessage(), e);
@@ -62,17 +62,4 @@ public class SysUserController extends BaseController {
 	}
 
 
-	@RequestMapping(value = "/save1", method = RequestMethod.POST)
-	public JsonResponseEntity save1(@RequestBody Map<String, Object> body) {
-		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
-		JsonKeyReader reader = new JsonKeyReader(body);
-
-		String username = reader.readString("username", false);
-		try {
-
-
-		} catch (Exception e) {
-		}
-		return jsonResponseEntity;
-	}
 }

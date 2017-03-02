@@ -1,5 +1,6 @@
 package com.season.platform.web;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -8,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Created by jiyc on 2017/2/13.
  */
-
+@MapperScan("com.season.platform.web.api.mapper*")
 @SpringBootApplication
 public class PlatformWebApplication {
 	private static Logger logger = LoggerFactory.getLogger(PlatformWebApplication.class);

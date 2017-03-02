@@ -1,0 +1,511 @@
+2017-02-28 17:36:12.192 [main] INFO  com.season.platform.web.PlatformWebApplication - Starting PlatformWebApplication on ky-pc1264 with PID 62636 (started by jiyc in D:\study new\MyGitHub\spring-boot-scaffold)
+2017-02-28 17:36:12.197 [main] DEBUG com.season.platform.web.PlatformWebApplication - Running with Spring Boot v1.5.1.RELEASE, Spring v4.3.6.RELEASE
+2017-02-28 17:36:12.198 [main] INFO  com.season.platform.web.PlatformWebApplication - The following profiles are active: dev
+2017-02-28 17:36:12.682 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2017-02-28 17:36:14.926 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-28 17:36:14.927 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-02-28 17:36:15.028 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-28 17:36:19.046 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2017-02-28 17:36:19.063 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found {0} custom documentation plugin(s)
+2017-02-28 17:36:19.070 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2017-02-28 17:36:19.073 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.074 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: hello belongs to groups: [[ResourceGroup{groupName='hello-world-controller', position=0, controller=com.season.platform.web.api.controller.HelloWorldController}]] 
+2017-02-28 17:36:19.075 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.075 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: json belongs to groups: [[ResourceGroup{groupName='hello-world-controller', position=0, controller=com.season.platform.web.api.controller.HelloWorldController}]] 
+2017-02-28 17:36:19.076 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:36:19.076 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: save1 belongs to groups: [[ResourceGroup{groupName='sys-user-controller', position=0, controller=com.season.platform.web.api.controller.SysUserController}]] 
+2017-02-28 17:36:19.076 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:36:19.076 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: save belongs to groups: [[ResourceGroup{groupName='sys-user-controller', position=0, controller=com.season.platform.web.api.controller.SysUserController}]] 
+2017-02-28 17:36:19.076 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: putUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: deleteBook belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: getUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:36:19.077 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: postUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:36:19.078 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:36:19.078 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: getUserList belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:36:19.080 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2017-02-28 17:36:19.081 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/hello-world-controller Description: hello-world-controller Position: 0
+2017-02-28 17:36:19.081 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/sys-user-controller Description: sys-user-controller Position: 0
+2017-02-28 17:36:19.087 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/lang/String;
+2017-02-28 17:36:19.088 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |hello|
+2017-02-28 17:36:19.088 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |hello|
+2017-02-28 17:36:19.089 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |hello|
+2017-02-28 17:36:19.094 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.094 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:36:19.100 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Skipping model of type Ljava/lang/String; as its either a container type, map, enum or base type, or its already been handled
+2017-02-28 17:36:19.101 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.String
+2017-02-28 17:36:19.101 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.102 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:36:19.105 [main] DEBUG springfox.documentation.schema.ModelDependencyProvider - Marking base type Ljava/lang/String; as seen
+2017-02-28 17:36:19.107 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /hello/helloweb.com.season.platform.web.api.controller.HelloWorldController.hello.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.134 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /hello/helloweb.com.season.platform.web.api.controller.HelloWorldController.hello.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.146 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.147 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.150 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.150 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.150 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.153 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.153 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.154 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.154 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.154 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.155 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.155 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.155 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.155 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.156 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.156 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.157 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.157 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.157 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.157 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.158 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.158 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.158 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.158 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.159 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.159 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.160 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.160 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.160 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.160 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.161 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.161 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.161 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.161 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.162 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.162 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.162 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.163 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method hello
+2017-02-28 17:36:19.163 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.163 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:36:19.167 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/lang/String;
+2017-02-28 17:36:19.167 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |json|
+2017-02-28 17:36:19.167 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |json|
+2017-02-28 17:36:19.167 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |json|
+2017-02-28 17:36:19.167 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.167 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:36:19.167 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.String
+2017-02-28 17:36:19.167 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.167 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:36:19.168 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /hello/json.com.season.platform.web.api.controller.HelloWorldController.json.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.181 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /hello/json.com.season.platform.web.api.controller.HelloWorldController.json.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.181 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.181 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.182 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.183 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.183 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.185 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.186 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.187 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.187 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.187 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.188 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.188 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.188 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.188 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.188 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.189 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.189 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.189 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.189 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.189 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.189 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.190 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.190 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.190 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.190 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.190 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.190 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.191 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.191 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.191 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.191 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.191 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.191 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.192 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.192 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.192 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.193 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.193 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method json
+2017-02-28 17:36:19.193 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.193 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:36:19.208 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Lcom/season/platform/web/common/entity/JsonResponseEntity;
+2017-02-28 17:36:19.208 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |save|
+2017-02-28 17:36:19.208 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding input parameter of type Ljava/lang/Object;
+2017-02-28 17:36:19.208 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |save|
+2017-02-28 17:36:19.208 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |save|
+2017-02-28 17:36:19.208 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:36:19.208 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(false)
+2017-02-28 17:36:19.209 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Skipping model of type Ljava/lang/Object; as its either a container type, map, enum or base type, or its already been handled
+2017-02-28 17:36:19.209 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.Object
+2017-02-28 17:36:19.209 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:36:19.209 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(false)
+2017-02-28 17:36:19.209 [main] DEBUG springfox.documentation.schema.ModelDependencyProvider - Marking base type Ljava/lang/Object; as seen
+2017-02-28 17:36:19.209 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.209 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.210 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.210 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.223 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property code
+2017-02-28 17:36:19.227 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getCode
+2017-02-28 17:36:19.228 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'code' renamed to 'code'
+2017-02-28 17:36:19.228 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property code to model
+2017-02-28 17:36:19.229 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getCode
+2017-02-28 17:36:19.229 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getCode
+2017-02-28 17:36:19.229 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getCode
+2017-02-28 17:36:19.229 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getCode
+2017-02-28 17:36:19.231 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property msg
+2017-02-28 17:36:19.231 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getMsg
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'msg' renamed to 'msg'
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property msg to model
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getMsg
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getMsg
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getMsg
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getMsg
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property data
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getData
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'data' renamed to 'data'
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property data to model
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getData
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getData
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getData
+2017-02-28 17:36:19.232 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getData
+2017-02-28 17:36:19.233 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Inferred 3 properties. Properties found code, msg, data
+2017-02-28 17:36:19.235 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Generated parameter model id: JsonResponseEntity, name: JsonResponseEntity, schema: {} models
+2017-02-28 17:36:19.236 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Adding a new model with key JsonResponseEntity
+2017-02-28 17:36:19.236 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.236 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.236 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.236 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.237 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /sysUser/save.com.season.platform.web.api.controller.SysUserController.save.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.237 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /sysUser/save.com.season.platform.web.api.controller.SysUserController.save.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.238 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:JsonResponseEntity
+2017-02-28 17:36:19.238 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:36:19.238 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method save
+2017-02-28 17:36:19.239 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:JsonResponseEntity
+2017-02-28 17:36:19.239 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:36:19.239 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Lcom/season/platform/web/common/entity/JsonResponseEntity;
+2017-02-28 17:36:19.239 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |save1|
+2017-02-28 17:36:19.240 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding input parameter of type Ljava/lang/Object;
+2017-02-28 17:36:19.240 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |save1|
+2017-02-28 17:36:19.240 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |save1|
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(false)
+2017-02-28 17:36:19.240 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.Object
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(false)
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.240 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.240 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Generated parameter model id: JsonResponseEntity, name: JsonResponseEntity, schema: {} models
+2017-02-28 17:36:19.241 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.241 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:36:19.241 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /sysUser/save1.com.season.platform.web.api.controller.SysUserController.save1.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.241 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /sysUser/save1.com.season.platform.web.api.controller.SysUserController.save1.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.242 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:JsonResponseEntity
+2017-02-28 17:36:19.242 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:36:19.242 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method save1
+2017-02-28 17:36:19.243 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:JsonResponseEntity
+2017-02-28 17:36:19.243 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:36:19.245 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/lang/String;
+2017-02-28 17:36:19.245 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |deleteBook|
+2017-02-28 17:36:19.246 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |deleteBook|
+2017-02-28 17:36:19.246 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |deleteBook|
+2017-02-28 17:36:19.246 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.246 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:36:19.246 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.String
+2017-02-28 17:36:19.247 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.247 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:36:19.247 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{id}.com.season.platform.web.api.controller.UserController.deleteBook.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.247 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{id}.com.season.platform.web.api.controller.UserController.deleteBook.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.249 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.250 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:36:19.250 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method deleteBook
+2017-02-28 17:36:19.255 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.266 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:36:19.270 [main] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method deleteBook
+2017-02-28 17:36:19.271 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Lcom/season/platform/web/api/model/User;
+2017-02-28 17:36:19.271 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |getUser|
+2017-02-28 17:36:19.271 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |getUser|
+2017-02-28 17:36:19.272 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |getUser|
+2017-02-28 17:36:19.272 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.272 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.272 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.272 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.273 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property id
+2017-02-28 17:36:19.274 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-02-28 17:36:19.274 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'id' renamed to 'id'
+2017-02-28 17:36:19.274 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property id to model
+2017-02-28 17:36:19.274 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-02-28 17:36:19.274 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property name
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getName
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'name' renamed to 'name'
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property name to model
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getName
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getName
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getName
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getName
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property age
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'age' renamed to 'age'
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property age to model
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-02-28 17:36:19.275 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-02-28 17:36:19.276 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-02-28 17:36:19.276 [main] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-02-28 17:36:19.276 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Inferred 3 properties. Properties found id, name, age
+2017-02-28 17:36:19.276 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Generated parameter model id: User, name: User, schema: {} models
+2017-02-28 17:36:19.276 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Adding a new model with key User
+2017-02-28 17:36:19.277 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.277 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.278 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.278 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.278 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{name}.com.season.platform.web.api.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.279 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{name}.com.season.platform.web.api.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.280 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:User
+2017-02-28 17:36:19.280 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:36:19.280 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method getUser
+2017-02-28 17:36:19.282 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:User
+2017-02-28 17:36:19.283 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:36:19.283 [main] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method getUser
+2017-02-28 17:36:19.284 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/util/List<Lcom/season/platform/web/api/model/User;>;
+2017-02-28 17:36:19.284 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |getUserList|
+2017-02-28 17:36:19.284 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |getUserList|
+2017-02-28 17:36:19.284 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |getUserList|
+2017-02-28 17:36:19.284 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.285 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Skipping model of type Ljava/util/List<Lcom/season/platform/web/api/model/User;>; as its either a container type, map, enum or base type, or its already been handled
+2017-02-28 17:36:19.285 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.util.List<com.season.platform.web.api.model.User>
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.285 [main] DEBUG springfox.documentation.schema.ModelDependencyProvider - Adding type for parameter Lcom/season/platform/web/api/model/User;
+2017-02-28 17:36:19.285 [main] DEBUG springfox.documentation.schema.ModelDependencyProvider - Recursively resolving dependencies for parameter Lcom/season/platform/web/api/model/User;
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.285 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.286 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:36:19.286 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.286 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:36:19.286 [main] DEBUG springfox.documentation.schema.DefaultModelProvider - Inferred 3 properties. Properties found id, name, age
+2017-02-28 17:36:19.286 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user.com.season.platform.web.api.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.287 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user.com.season.platform.web.api.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.287 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:List
+2017-02-28 17:36:19.287 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:36:19.288 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method getUserList
+2017-02-28 17:36:19.288 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:List
+2017-02-28 17:36:19.289 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:36:19.290 [main] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method getUserList
+2017-02-28 17:36:19.290 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/lang/String;
+2017-02-28 17:36:19.290 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |postUser|
+2017-02-28 17:36:19.290 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |postUser|
+2017-02-28 17:36:19.290 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |postUser|
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:36:19.291 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.String
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user.com.season.platform.web.api.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.291 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user.com.season.platform.web.api.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.294 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Expanding parameter type: class com.season.platform.web.api.model.User
+2017-02-28 17:36:19.300 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6b2f7527
+2017-02-28 17:36:19.300 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@6b2f7527, with type: 
+2017-02-28 17:36:19.301 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@4c9cce17
+2017-02-28 17:36:19.301 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@4c9cce17, with type: 
+2017-02-28 17:36:19.301 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@73316a0a
+2017-02-28 17:36:19.301 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@73316a0a, with type: 
+2017-02-28 17:36:19.303 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.303 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:36:19.304 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method postUser
+2017-02-28 17:36:19.304 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.304 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:36:19.304 [main] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method postUser
+2017-02-28 17:36:19.305 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/lang/String;
+2017-02-28 17:36:19.306 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |putUser|
+2017-02-28 17:36:19.306 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |putUser|
+2017-02-28 17:36:19.306 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |putUser|
+2017-02-28 17:36:19.306 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.306 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:36:19.306 [main] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.lang.String
+2017-02-28 17:36:19.306 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:36:19.306 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:36:19.307 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{id}.com.season.platform.web.api.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.307 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{id}.com.season.platform.web.api.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Expanding parameter type: class com.season.platform.web.api.model.User
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@3d4b45b
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@3d4b45b, with type: 
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@4d0b276e
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@4d0b276e, with type: 
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Attempting to expand field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@31531d0d
+2017-02-28 17:36:19.308 [main] DEBUG springfox.documentation.spring.web.readers.parameter.ModelAttributeParameterExpander - Building parameter for field: springfox.documentation.spring.web.readers.parameter.ModelAttributeField@31531d0d, with type: 
+2017-02-28 17:36:19.309 [main] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to:string
+2017-02-28 17:36:19.309 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:36:19.309 [main] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method putUser
+2017-02-28 17:36:19.309 [main] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:string
+2017-02-28 17:36:19.310 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:36:19.310 [main] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method putUser
+2017-02-28 17:36:19.324 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2017-02-28 17:36:19.335 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2017-02-28 17:36:19.566 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-28 17:36:19.590 [main] INFO  com.season.platform.web.PlatformWebApplication - Started PlatformWebApplication in 7.901 seconds (JVM running for 8.465)
+2017-02-28 17:36:19.590 [main] ERROR com.season.platform.web.PlatformWebApplication - 启动成功
+2017-02-28 17:37:32.188 [main] INFO  com.season.platform.web.PlatformWebApplication - Starting PlatformWebApplication on ky-pc1264 with PID 65836 (started by jiyc in D:\study new\MyGitHub\spring-boot-scaffold)
+2017-02-28 17:37:32.191 [main] INFO  com.season.platform.web.PlatformWebApplication - The following profiles are active: dev
+2017-02-28 17:37:34.996 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-02-28 17:37:34.997 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-02-28 17:37:35.092 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-02-28 17:37:39.412 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2017-02-28 17:37:39.430 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found {0} custom documentation plugin(s)
+2017-02-28 17:37:39.439 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2017-02-28 17:37:39.443 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.445 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: hello belongs to groups: [[ResourceGroup{groupName='hello-world-controller', position=0, controller=com.season.platform.web.api.controller.HelloWorldController}]] 
+2017-02-28 17:37:39.446 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.446 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: json belongs to groups: [[ResourceGroup{groupName='hello-world-controller', position=0, controller=com.season.platform.web.api.controller.HelloWorldController}]] 
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: save1 belongs to groups: [[ResourceGroup{groupName='sys-user-controller', position=0, controller=com.season.platform.web.api.controller.SysUserController}]] 
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: save belongs to groups: [[ResourceGroup{groupName='sys-user-controller', position=0, controller=com.season.platform.web.api.controller.SysUserController}]] 
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: putUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:37:39.447 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: deleteBook belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: getUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: getUserList belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:37:39.448 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Request mapping: postUser belongs to groups: [[ResourceGroup{groupName='user-controller', position=0, controller=com.season.platform.web.api.controller.UserController}]] 
+2017-02-28 17:37:39.453 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/hello-world-controller Description: hello-world-controller Position: 0
+2017-02-28 17:37:39.454 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/user-controller Description: user-controller Position: 0
+2017-02-28 17:37:39.455 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/sys-user-controller Description: sys-user-controller Position: 0
+2017-02-28 17:37:39.470 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.470 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:37:39.477 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.478 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:37:39.483 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /hello/helloweb.com.season.platform.web.api.controller.HelloWorldController.hello.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.483 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /hello/helloweb.com.season.platform.web.api.controller.HelloWorldController.hello.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.499 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.501 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.504 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.505 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.506 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.507 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.509 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.509 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.510 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.511 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.512 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.512 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.513 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.514 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.514 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.515 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello-world-controller
+2017-02-28 17:37:39.519 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.519 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:37:39.520 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.520 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:37:39.520 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /hello/json.com.season.platform.web.api.controller.HelloWorldController.json.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.520 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /hello/json.com.season.platform.web.api.controller.HelloWorldController.json.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.520 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.521 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.521 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.522 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.522 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.523 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.523 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.523 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.524 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.524 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.525 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.526 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.526 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.526 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.527 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.528 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method json was hello-world-controller
+2017-02-28 17:37:39.544 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:37:39.545 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(false)
+2017-02-28 17:37:39.545 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:37:39.545 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(false)
+2017-02-28 17:37:39.545 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.545 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.546 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.546 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.575 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.575 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.576 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.576 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.577 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /sysUser/save.com.season.platform.web.api.controller.SysUserController.save.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.577 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /sysUser/save.com.season.platform.web.api.controller.SysUserController.save.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.578 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:37:39.579 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save was sys-user-controller
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.Object(false)
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.Object(false)
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.Object(false)
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.581 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.582 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.582 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.common.entity.JsonResponseEntity(true)
+2017-02-28 17:37:39.582 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /sysUser/save1.com.season.platform.web.api.controller.SysUserController.save1.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.582 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /sysUser/save1.com.season.platform.web.api.controller.SysUserController.save1.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.583 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:37:39.584 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method save1 was sys-user-controller
+2017-02-28 17:37:39.587 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.587 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:37:39.588 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.588 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:37:39.588 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{id}.com.season.platform.web.api.controller.UserController.deleteBook.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.588 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{id}.com.season.platform.web.api.controller.UserController.deleteBook.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.591 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:37:39.595 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteBook was user-controller
+2017-02-28 17:37:39.598 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.598 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.598 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.598 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.600 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.600 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.600 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.600 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.601 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{name}.com.season.platform.web.api.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.601 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{name}.com.season.platform.web.api.controller.UserController.getUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.602 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:37:39.603 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUser was user-controller
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.606 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.607 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.607 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key java.util.List<com.season.platform.web.api.model.User>(true)
+2017-02-28 17:37:39.607 [main] INFO  springfox.documentation.schema.property.ModelPropertiesKeyGenerator - Cache key generated: com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.607 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelProperties with key com.season.platform.web.api.model.User(true)
+2017-02-28 17:37:39.607 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user.com.season.platform.web.api.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.608 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user.com.season.platform.web.api.controller.UserController.getUserList.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.608 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:37:39.609 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method getUserList was user-controller
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user.com.season.platform.web.api.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.610 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user.com.season.platform.web.api.controller.UserController.postUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.620 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:37:39.621 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method postUser was user-controller
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /user/{id}.com.season.platform.web.api.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.623 [main] INFO  springfox.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /user/{id}.com.season.platform.web.api.controller.UserController.putUser.DefaultGenericTypeNamingStrategy
+2017-02-28 17:37:39.625 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:37:39.627 [main] INFO  springfox.documentation.swagger.web.ClassOrApiAnnotationResourceGrouping - Group for method putUser was user-controller
+2017-02-28 17:37:39.644 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2017-02-28 17:37:39.662 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8080]
+2017-02-28 17:37:39.930 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-02-28 17:37:39.959 [main] INFO  com.season.platform.web.PlatformWebApplication - Started PlatformWebApplication in 8.218 seconds (JVM running for 8.719)
+2017-02-28 17:37:39.960 [main] ERROR com.season.platform.web.PlatformWebApplication - PlatformWebApplication start success
