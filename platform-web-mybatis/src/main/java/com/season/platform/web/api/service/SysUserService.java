@@ -8,4 +8,7 @@ import com.season.platform.web.api.model.SysUser;
  * Created by jiyc on 2017/3/2.
  */
 public interface SysUserService extends IService<SysUser> {
+	SysUser selectByName(String userName);
+
+
 }

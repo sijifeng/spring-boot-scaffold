@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.season.platform.web.api.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="com.season.platform.web.api.model.SysUser">
+        <id column="kingnet_id" property="kingnetId" jdbcType="VARCHAR"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="real_name" property="realName" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="department" property="department" jdbcType="INTEGER"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="last_ip" property="lastIp" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="CHAR"/>
+        <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP"/>
+        <result column="data" property="data" jdbcType="LONGVARCHAR"/>
+    </resultMap>
 
+    <sql id="Base_Column_List">
+        kingnet_id,user_id, user_name, real_name, email, type, department,last_ip, status, last_update,data
+    </sql>
+
+    <select id="selectByName" resultType="com.season.platform.web.api.model.SysUser" parameterType="String">
+        <![CDATA[
+        select
+        <include refid="Base_Column_List"/>
+        from sys_user
+        where user_name = #{userName,jdbcType=VARCHAR} limit 1
+        ]]>
+    </select>
 
 </mapper>

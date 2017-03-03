@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Created by jiyc on 2017/2/13.
  */
-@MapperScan("com.season.platform.web.api.mapper*")
+
 @SpringBootApplication
 public class PlatformWebApplication {
 	private static Logger logger = LoggerFactory.getLogger(PlatformWebApplication.class);

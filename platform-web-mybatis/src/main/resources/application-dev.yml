@@ -1,15 +1,12 @@
 spring:
-  thymeleaf:
-    cache: true
-    check-template-location: true
-    content-type: text/html
-    enabled: true
-    encoding: utf-8
-    mode: HTML5
-    prefix: classpath:/templates/
-    suffix: .html
-    excluded-view-names:
-    template-resolver-order:
+  freemarker:
+     cache: false
+     checkTemplateLocation: true
+     contentType: text/html
+     suffix: ftl
+     templateEncoding: UTF-8
+     templateLoaderPath: classpath:/templates/
+
   datasource:
     url: jdbc:mysql://localhost:3307/kingnetdc_auth_service?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
