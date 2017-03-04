@@ -1,14 +1,14 @@
 spring:
   freemarker:
-     cache: false
-     checkTemplateLocation: true
-     contentType: text/html
-     suffix: ftl
-     templateEncoding: UTF-8
-     templateLoaderPath: classpath:/templates/
+       cache: false
+       checkTemplateLocation: true
+       contentType: text/html
+       suffix: .ftl
+       templateEncoding: UTF-8
+       templateLoaderPath: classpath:/templates/
 
   datasource:
-    url: jdbc:mysql://localhost:3307/kingnetdc_auth_service?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://localhost:3307/kingnetdc-auth-service?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: sijifeng
     driver-class-name: com.mysql.jdbc.Driver
