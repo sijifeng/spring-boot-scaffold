@@ -19,12 +19,15 @@
         kingnet_id,user_id, user_name, real_name, email, type, department,last_ip, status, last_update,data
     </sql>
 
-    <select id="selectByName" resultType="com.season.platform.web.api.model.SysUser" parameterType="String">
+    <select id="selectOK" resultType="int" >
+        SELECT count(*) FROM sys_user where kingnet_id='kingnet-user-831769865629990912'
+    </select>
+
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="String">
         <![CDATA[
-        select
-        <include refid="Base_Column_List"/>
+        select <include refid="Base_Column_List"/>
         from sys_user
-        where user_name = #{userName,jdbcType=VARCHAR} limit 1
+        where user_name = #{userName,jdbcType=VARCHAR}
         ]]>
     </select>
 

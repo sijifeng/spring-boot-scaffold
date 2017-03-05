@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class BaseController {
 
-	public static final Integer SUCCESS_CODE = 0;
+	public static final Integer SUCCESS_CODE = 200;
 	public static final String SUCCESS_MSG = "成功。";
 	public static final Integer ERROR_CODE = 400;
 	public static final String ERROR_MSG = "失败。";

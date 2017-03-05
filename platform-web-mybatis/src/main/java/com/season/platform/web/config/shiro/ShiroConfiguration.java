@@ -3,6 +3,7 @@ package com.season.platform.web.config.shiro;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
+import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
@@ -28,7 +29,7 @@ public class ShiroConfiguration {
 	 * 3、部分过滤器可指定参数，如perms，roles
 	 *
 	 */
-	@Bean
+	@Bean(name = "shiroFilter")
 	public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
 		ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 		// 必须设置 SecurityManager
@@ -51,7 +52,7 @@ public class ShiroConfiguration {
 		//filterChainDefinitionMap.put("/**", "authc");
 		filterChainDefinitionMap.put("/**", "anon");
 		// 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
-		shiroFilterFactoryBean.setLoginUrl("/login");
+		shiroFilterFactoryBean.setLoginUrl("/toLogin");
 		// 登录成功后要跳转的链接
 		shiroFilterFactoryBean.setSuccessUrl("/index");
 		// 未授权界面;
@@ -65,19 +66,25 @@ public class ShiroConfiguration {
 	public SecurityManager securityManager() {
 		DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
 		//设置realm.
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 		securityManager.setRealm(myShiroRealm());
 		//注入缓存管理器;
-		securityManager.setCacheManager(ehCacheManager());//这个如果执行多次，也是同样的一个对象;
+		//securityManager.setCacheManager(ehCacheManager());//这个如果执行多次，也是同样的一个对象;
 		//注入记住我管理器;
-		securityManager.setRememberMeManager(rememberMeManager());
+		//securityManager.setRememberMeManager(rememberMeManager());
 		return securityManager;
 	}
 
 	@Bean
 	public MyShiroRealm myShiroRealm(){
 		MyShiroRealm myShiroRealm = new MyShiroRealm();
-		myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+		//myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
 		return myShiroRealm;
+	}
+
+	@Bean(name = "lifecycleBeanPostProcessor")
+	public LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
+		return new LifecycleBeanPostProcessor();
 	}
 
 	@Bean
@@ -90,12 +97,12 @@ public class ShiroConfiguration {
 		return hashedCredentialsMatcher;
 	}
 
-	@Bean
+/*	@Bean
 	public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(SecurityManager securityManager){
 		AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
 		authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
 		return authorizationAttributeSourceAdvisor;
-	}
+	}*/
 
 	/**
 	 * shiro缓存管理器;

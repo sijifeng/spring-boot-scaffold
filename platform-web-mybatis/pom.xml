@@ -13,6 +13,7 @@
     <properties>
         <shiro.version>1.2.3</shiro.version>
         <kaptcha-version>0.0.9</kaptcha-version>
+        <fastjson.version>1.2.11</fastjson.version>
     </properties>
 
 
@@ -163,6 +164,17 @@
             <version>${kaptcha-version}</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin.external.google</groupId>
+            <artifactId>android-json</artifactId>
+            <version>0.0.20131108.vaadin1</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -46,10 +46,11 @@ $(function(){
             element.parent('div').append(error);  
         },
         submitHandler : function(form) {
-			$.post(base_url + "/login", $("#loginForm").serialize(), function(data, status) {
+			$.post("/login", $("#loginForm").serialize(), function(data, status) {
 				if (data.code == "200") {
+				alert("success")
 					ComAlert.show(1, "登陆成功", function(){
-						window.location.href = base_url;
+						window.location.href = "/";
 					});
 				} else {
 					ComAlert.show(2, data.msg);

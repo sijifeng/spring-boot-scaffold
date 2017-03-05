@@ -13,13 +13,19 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService {
-	@Autowired
-	private SysUserMapper sysUserMapper;
+    @Autowired
+    private SysUserMapper sysUserMapper;
 
-	@Override
-	public SysUser selectByName(String userName) {
-		return sysUserMapper.selectByName(userName);
-	}
+    @Override
+    public SysUser selectByName(String userName) {
+        System.out.println(userName);
+        //System.out.println(sysUserMapper.selectById("kingnet-user-831769865629990912"));
+        //SysUser user = sysUserMapper.selectById("kingnet-user-831769865629990912");
+        System.out.println("u1=" + sysUserMapper.selectOK());
+        SysUser user = sysUserMapper.selectByName(userName);
+        System.out.println(user + "xx");
+        return user;
+    }
 
 
 }

@@ -56,7 +56,7 @@
 
 <#macro commonHeader>
 	<header class="main-header">
-		<a href="${request.contextPath}/" class="logo">
+		<a href="/" class="logo">
 			<span class="logo-mini"><b>Orange</b></span>
 			<span class="logo-lg"><b>权限</b>中心</span>
 		</a>
@@ -83,10 +83,10 @@
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu">
 				<li class="header">常用模块</li>
-				<li class="nav-click" ><a href="${request.contextPath}/jobinfo"><i class="fa fa-circle-o text-red"></i> <span>调度管理</span></a></li>
-				<li class="nav-click" ><a href="${request.contextPath}/joblog"><i class="fa fa-circle-o text-yellow"></i><span>调度日志</span></a></li>
-                <li class="nav-click" ><a href="${request.contextPath}/jobgroup"><i class="fa fa-circle-o text-aqua"></i> <span>执行器管理</span></a></li>
-				<li class="nav-click" ><a href="${request.contextPath}/help"><i class="fa fa-circle-o text-red"></i><span>使用教程</span></a></li>
+				<li class="nav-click" ><a href="/jobinfo"><i class="fa fa-circle-o text-red"></i> <span>调度管理</span></a></li>
+				<li class="nav-click" ><a href="/joblog"><i class="fa fa-circle-o text-yellow"></i><span>调度日志</span></a></li>
+                <li class="nav-click" ><a href="/jobgroup"><i class="fa fa-circle-o text-aqua"></i> <span>执行器管理</span></a></li>
+				<li class="nav-click" ><a href="/help"><i class="fa fa-circle-o text-red"></i><span>使用教程</span></a></li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
