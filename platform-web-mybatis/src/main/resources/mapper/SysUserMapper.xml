@@ -5,6 +5,7 @@
         <id column="kingnet_id" property="kingnetId" jdbcType="VARCHAR"/>
         <result column="user_id" property="userId" jdbcType="VARCHAR"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="real_name" property="realName" jdbcType="VARCHAR"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
         <result column="department" property="department" jdbcType="INTEGER"/>
@@ -16,19 +17,14 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        kingnet_id,user_id, user_name, real_name, email, type, department,last_ip, status, last_update,data
+        kingnet_id,user_id, user_name,password, real_name, email, type, department,last_ip, status, last_update,data
     </sql>
 
-    <select id="selectOK" resultType="int" >
-        SELECT count(*) FROM sys_user where kingnet_id='kingnet-user-831769865629990912'
-    </select>
-
     <select id="selectByName" resultMap="BaseResultMap" parameterType="String">
-        <![CDATA[
-        select <include refid="Base_Column_List"/>
+        select
+        <include refid="Base_Column_List"/>
         from sys_user
         where user_name = #{userName,jdbcType=VARCHAR}
-        ]]>
     </select>
 
 </mapper>
