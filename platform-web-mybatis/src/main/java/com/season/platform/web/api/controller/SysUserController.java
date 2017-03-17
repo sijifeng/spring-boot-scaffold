@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ import java.util.Map;
 /**
  * Created by jiyc on 2017/2/26.
  */
-@RestController
+@Controller
 @RequestMapping("/sysUser")
 public class SysUserController extends BaseController {
 	private static Logger logger = LoggerFactory.getLogger(SysUserController.class);
@@ -28,6 +29,7 @@ public class SysUserController extends BaseController {
 	private SysUserService sysUserService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.POST)
+	@ResponseBody
 	public JsonResponseEntity list(@RequestBody Map<String, Object> param) {
 		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
 		try {
@@ -41,8 +43,7 @@ public class SysUserController extends BaseController {
 
 
 			Page<SysUser> page = new Page<SysUser>(start, size);
-			Page<SysUser> list = sysUserService.selectPage(page,new EntityWrapper<SysUser>().like("user_name",username));
-			//List<SysUser> userList = sysUserService.selectList(null);
+			Page<SysUser> list = sysUserService.selectPage(page, new EntityWrapper<SysUser>().like("user_name", username));
 			getSuccessResponse(jsonResponseEntity, list);
 		} catch (Throwable e) {
 			logger.error(e.getMessage(), e);
@@ -65,7 +66,6 @@ public class SysUserController extends BaseController {
 		} catch (Throwable e) {
 			logger.error(e.getMessage(), e);
 		}
-
 		return "user/edit";
 	}
 
@@ -75,42 +75,42 @@ public class SysUserController extends BaseController {
 		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
 
 		try {
-			if(StringUtils.isNotBlank(sysUser.getKingnetId())){
+			if (StringUtils.isNotBlank(sysUser.getKingnetId())) {
 				sysUserService.updateById(sysUser);
-			}else{
+			} else {
 				// 新增
 				sysUser.setKingnetId(IdWorker.generatorId());
 				sysUserService.insertOrUpdate(sysUser);
 			}
 			getSuccessResponse(jsonResponseEntity, null);
 		} catch (Throwable e) {
-			logger.error(e.getMessage(),e);
+			logger.error(e.getMessage(), e);
 			getErrorResponse(jsonResponseEntity, ERROR_CODE, null, e.getMessage());
 		}
 		return jsonResponseEntity;
 	}
 
 	@RequestMapping(value = "/delete/{userId}", method = RequestMethod.DELETE)
-	public JsonResponseEntity delete(@PathVariable(required=true) String userId){
+	public JsonResponseEntity delete(@PathVariable(required = true) String userId) {
 		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
 		try {
 			sysUserService.deleteById(userId);
 			getSuccessResponse(jsonResponseEntity, null);
 		} catch (Throwable e) {
-			logger.error(e.getMessage(),e);
+			logger.error(e.getMessage(), e);
 			getErrorResponse(jsonResponseEntity, ERROR_CODE, null, e.getMessage());
 		}
 		return jsonResponseEntity;
 	}
 
 	@RequestMapping(value = "/select/{userId}", method = RequestMethod.GET)
-	public JsonResponseEntity selectById(@PathVariable(required=true) String userId){
+	public JsonResponseEntity selectById(@PathVariable(required = true) String userId) {
 		JsonResponseEntity jsonResponseEntity = new JsonResponseEntity();
 		try {
 			SysUser user = sysUserService.selectById(userId);
 			getSuccessResponse(jsonResponseEntity, user);
 		} catch (Throwable e) {
-			logger.error(e.getMessage(),e);
+			logger.error(e.getMessage(), e);
 			getErrorResponse(jsonResponseEntity, ERROR_CODE, null, e.getMessage());
 		}
 		return jsonResponseEntity;
