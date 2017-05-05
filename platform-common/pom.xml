@@ -14,6 +14,7 @@
 
     <modules>
         <module>platform-common-utils</module>
+		<module>platform-common-hbase</module>
     </modules>
 
 </project>

@@ -1,8 +1,6 @@
-package com.season.platform.common.core;
+package com.season.platform.common.core.jmx;
 
-import com.season.platform.common.core.jmx.SystemInfoUtils;
 import com.sun.management.OperatingSystemMXBean;
-import com.sun.management.UnixOperatingSystemMXBean;
 
 import java.lang.management.*;
 import java.util.List;
@@ -39,6 +37,7 @@ public class Metrics {
 
 		System.out.println("=======================OperatingSystemMXBean============================ ");
 		OperatingSystemMXBean osm = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+
 		System.out.println("总物理内存： "+osm.getTotalPhysicalMemorySize());
 		System.out.println("空闲物理内存： "+osm.getFreePhysicalMemorySize());
 		System.out.println("CPU负载： "+osm.getProcessCpuLoad());
