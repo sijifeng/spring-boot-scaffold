@@ -15,6 +15,9 @@
     <modules>
         <module>platform-common-utils</module>
 		<module>platform-common-hbase</module>
+		<module>platform-common-kafka</module>
+		<module>platform-common-core</module>
+		<module>platform-common-spark</module>
     </modules>
 
 </project>

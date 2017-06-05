@@ -31,11 +31,40 @@ public class HbaseUtil {
 		/*Configuration conf = HBaseConfiguration.create();
 		//配置访问
 		conf.set("hbase.zookeeper.quorum", "172.19.4.231,172.19.4.230,172.19.4.239");
+		conf.set("hbase.zookeeper.property.clientPort", "2181");
 		try {
 			conn = ConnectionFactory.createConnection(conf);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}*/
+	}
+
+	//建表
+	public static void createTable(String tableName){
+		HBaseAdmin admin=null;
+		try {
+			admin = new HBaseAdmin(conf);
+			if(admin.tableExists(tableName)){
+				admin.disableTable(tableName);
+				admin.deleteTable(tableName);
+				System.out.println("delete exixt table");
+			}
+			HTableDescriptor table = new HTableDescriptor(tableName);
+			table.addFamily(new HColumnDescriptor(Bytes.toBytes("info")));
+			table.addFamily(new HColumnDescriptor(Bytes.toBytes("other")));
+			admin.createTable(table);
+			System.out.println("create table success");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				if(admin!=null){
+					admin.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	/**
