@@ -18,6 +18,8 @@
 		<module>platform-common-kafka</module>
 		<module>platform-common-core</module>
 		<module>platform-common-spark</module>
+        <module>platform-common-es</module>
+        <module>platform-common-hdfs</module>
     </modules>
 
 </project>
