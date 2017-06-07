@@ -19,8 +19,21 @@
         <relativePath/>
     </parent>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modules>
         <module>platform-common</module>
+        <module>platform-springcloud</module>
         <module>platform-repository</module>
         <module>platform-web</module>
 		<module>platform-web-mybatis</module>

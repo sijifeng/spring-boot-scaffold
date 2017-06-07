@@ -30,7 +30,7 @@ public class KafkaTest {
 	// 重试间隔时间
 	private long retryIntervalMillis = 1000;
 	// Topic
-	String topic = "dana_test";
+	String topic = "1301158_out";
 
 	// 缓存Topic/Partition对应的Broker连接信息
 	private Map<KafkaTopicPartitionInfo, List<String>> replicaBrokers = new HashMap<KafkaTopicPartitionInfo, List<String>>();
@@ -47,7 +47,7 @@ public class KafkaTest {
 		TreeMap<Integer, PartitionMetadata> metadatas = findLeader(kafkaHosts, 9092, topic);
 
 		for (Map.Entry<Integer, PartitionMetadata> entry : metadatas.entrySet()) {
-			int maxReads = 10;
+
 			int partitionID = entry.getKey();
 			String leadBroker = entry.getValue().leader().host();
 			String clientName = "Client_" + topic + "_" + partitionID;
@@ -83,13 +83,14 @@ public class KafkaTest {
 				System.out.println("The first read offset is:" + readOffSet);
 
 				int numErrors = 0;
+				int maxReads = 10;
 				boolean ever = maxReads <= 0;
 				// 开始数据读取操作循环，当maxReads为非正数的时候，一直读取数据；当maxReads为正数的时候，最多读取maxReads条数据
 				while (ever || maxReads > 0) {
 					// 构建获取数据的请求对象， 给定获取数据对应的topic、partition、offset以及每次获取数据最多获取条数
 					kafka.api.FetchRequest request = new FetchRequestBuilder()
 							.clientId(clientName)
-							.addFetch(topic, partitionID, readOffSet, 100000)
+							.addFetch(topic, partitionID, readOffSet, 5 * 1024 * 1024)
 							.build();
 
 					// 发送请求到Kafka，并获得返回值
@@ -182,7 +183,8 @@ public class KafkaTest {
 														   int a_port, String a_topic) {
 		TreeMap<Integer, PartitionMetadata> map = new TreeMap<Integer, PartitionMetadata>();
 		//
-		loop: for (String seed : a_seedBrokers) {
+		loop:
+		for (String seed : a_seedBrokers) {
 			SimpleConsumer consumer = null;
 			try {
 				consumer = new SimpleConsumer(seed, a_port, 100000, 64 * 1024,
