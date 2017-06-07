@@ -20,6 +20,9 @@
         <module>platform-springcloud-eureka-service2</module>
         <module>platform-springcloud-ribbon</module>
         <module>platform-springcloud-feign</module>
+
+        <module>platform-springcloud-config-server</module>
+        <module>platform-springcloud-config-client</module>
     </modules>
 
 </project>
