@@ -23,6 +23,11 @@
 
         <module>platform-springcloud-config-server</module>
         <module>platform-springcloud-config-client</module>
+
+        <module>platform-springcloud-zuul</module>
+
+        <module>platform-springcloud-eureka-server-ha</module>
+        <module>platform-springcloud-bus</module>
     </modules>
 
 </project>

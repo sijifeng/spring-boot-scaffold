@@ -1,0 +1,24 @@
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3307/scaffold
+#    username: root
+#    password: sijifeng
+
+
+customer:
+  thrift:
+    server:
+      port: 8090
+      ipAddress: 127.0.0.1
+
+
+
+
+
+
+
+
+
+
+
+

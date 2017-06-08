@@ -20,6 +20,10 @@
 		<module>platform-common-spark</module>
         <module>platform-common-es</module>
         <module>platform-common-hdfs</module>
+        <module>platform-common-thrift</module>
+        <module>platform-common-flume</module>
+        <module>platform-common-hive</module>
+        <module>platform-common-presto</module>
     </modules>
 
 </project>
