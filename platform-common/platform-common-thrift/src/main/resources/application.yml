@@ -11,6 +11,11 @@ customer:
       port: 8090
       ipAddress: 127.0.0.1
 
+#日志
+logging:
+  config: classpath:logback.xml
+  path: log
+
 
 
 

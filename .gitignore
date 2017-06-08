@@ -12,3 +12,4 @@ disnotice.db
 .classpath
 *settings*
 /out/
+/log/

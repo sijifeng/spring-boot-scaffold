@@ -18,13 +18,16 @@ import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
 
 import com.season.platform.thrift.util.ibm.Hello.AsyncClient.helloString_call;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class HelloServiceClient {
+	private static final Logger logger = LoggerFactory.getLogger(HelloServiceServer.class);
+
 	public static final String SERVER_IP = "localhost";
 	public static final int SERVER_PORT = 7911;
 	public static final int TIMEOUT = 30000;
-
 
 	public static void main(String[] args) {
 		HelloServiceClient client = new HelloServiceClient();

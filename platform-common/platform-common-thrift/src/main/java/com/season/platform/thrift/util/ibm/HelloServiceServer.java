@@ -1,7 +1,6 @@
 package com.season.platform.thrift.util.ibm;
 
 import org.apache.thrift.TProcessor;
-import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TBinaryProtocol.Factory;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.server.THsHaServer;
@@ -16,20 +15,27 @@ import org.apache.thrift.transport.TNonblockingServerTransport;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TTransportException;
 import org.apache.thrift.transport.TTransportFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-
+/**
+ *
+ */
 public class HelloServiceServer {
+	private static final Logger logger = LoggerFactory.getLogger(HelloServiceServer.class);
+
 	/**
 	 * 启动 Thrift 服务器
 	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		HelloServiceServer server = new HelloServiceServer();
+		/*HelloServiceServer server = new HelloServiceServer();
+		server.SimpleServer();*/
 		//server.ThreadPoolServer();
 		//server.NonblockingServer();
 		//server.HsHaServer();
-		server.AsynServer();
+		//server.AsynServer();
 		//server.ThreadedSelectorServer();
 	}
 
@@ -47,13 +53,11 @@ public class HelloServiceServer {
 			TServer.Args tArgs = new TServer.Args(serverTransport);
 			tArgs.processor(processor);
 			tArgs.protocolFactory(proFactory);
-
 			TServer server = new TSimpleServer(tArgs);
-
 			System.out.println("Start server on port 7911...");
 			server.serve();
 		} catch (TTransportException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	}
 
@@ -73,13 +77,12 @@ public class HelloServiceServer {
 					serverTransport);
 			ttpsArgs.processor(processor);
 			ttpsArgs.protocolFactory(proFactory);
-
 			TServer server = new TThreadPoolServer(ttpsArgs);
 
 			System.out.println("Start server on port 7911...");
 			server.serve();
 		} catch (TTransportException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	}
 
