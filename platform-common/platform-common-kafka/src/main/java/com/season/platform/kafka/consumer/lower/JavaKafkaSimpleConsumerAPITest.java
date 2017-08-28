@@ -10,12 +10,12 @@ public class JavaKafkaSimpleConsumerAPITest {
 	public static void main(String[] args) {
 		JavaKafkaSimpleConsumerAPI example = new JavaKafkaSimpleConsumerAPI();
 		long maxReads = 300;
-		String topic = "test2";
+		String topic = "mongo_assemble_events_dimension";
 		int partitionID = 0;
 
 		KafkaTopicPartitionInfo topicPartitionInfo = new KafkaTopicPartitionInfo(topic, partitionID);
 		List<KafkaBrokerInfo> seeds = new ArrayList<KafkaBrokerInfo>();
-		seeds.add(new KafkaBrokerInfo("127.0.0.1", 9092));
+		seeds.add(new KafkaBrokerInfo("192.168.0.22", 29092));
 
 		try {
 			example.run(maxReads, topicPartitionInfo, seeds);

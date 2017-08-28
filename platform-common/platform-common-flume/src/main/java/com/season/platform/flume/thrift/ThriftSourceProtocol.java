@@ -1045,7 +1045,7 @@ public class ThriftSourceProtocol {
           switch (schemeField.id) {
             case 0: // SUCCESS
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.success = com.sijifeng.framework.study.thrift.flume.Status.findByValue(iprot.readI32());
+                struct.success = Status.findByValue(iprot.readI32());
                 struct.setSuccessIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
@@ -1103,7 +1103,7 @@ public class ThriftSourceProtocol {
         TTupleProtocol iprot = (TTupleProtocol) prot;
         BitSet incoming = iprot.readBitSet(1);
         if (incoming.get(0)) {
-          struct.success = com.sijifeng.framework.study.thrift.flume.Status.findByValue(iprot.readI32());
+          struct.success = Status.findByValue(iprot.readI32());
           struct.setSuccessIsSet(true);
         }
       }
@@ -1837,7 +1837,7 @@ public class ThriftSourceProtocol {
           switch (schemeField.id) {
             case 0: // SUCCESS
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.success = com.sijifeng.framework.study.thrift.flume.Status.findByValue(iprot.readI32());
+                struct.success = Status.findByValue(iprot.readI32());
                 struct.setSuccessIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
@@ -1895,7 +1895,7 @@ public class ThriftSourceProtocol {
         TTupleProtocol iprot = (TTupleProtocol) prot;
         BitSet incoming = iprot.readBitSet(1);
         if (incoming.get(0)) {
-          struct.success = com.sijifeng.framework.study.thrift.flume.Status.findByValue(iprot.readI32());
+          struct.success = Status.findByValue(iprot.readI32());
           struct.setSuccessIsSet(true);
         }
       }

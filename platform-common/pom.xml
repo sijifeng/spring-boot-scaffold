@@ -24,6 +24,8 @@
         <module>platform-common-flume</module>
         <module>platform-common-hive</module>
         <module>platform-common-presto</module>
+        <module>platform-common-guava</module>
+        <module>platform-common-akka</module>
     </modules>
 
 </project>
