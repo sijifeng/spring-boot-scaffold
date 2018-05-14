@@ -12,7 +12,25 @@
     <artifactId>platform-springcloud</artifactId>
     <packaging>pom</packaging>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>1.5.13.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <modules>
         <module>platform-springcloud-eureka-server</module>
@@ -20,12 +38,9 @@
         <module>platform-springcloud-eureka-service2</module>
         <module>platform-springcloud-ribbon</module>
         <module>platform-springcloud-feign</module>
-
         <module>platform-springcloud-config-server</module>
         <module>platform-springcloud-config-client</module>
-
         <module>platform-springcloud-zuul</module>
-
         <module>platform-springcloud-eureka-server-ha</module>
         <module>platform-springcloud-bus</module>
     </modules>

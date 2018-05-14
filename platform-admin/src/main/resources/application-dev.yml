@@ -1,0 +1,73 @@
+spring:
+  freemarker:
+       cache: false
+       checkTemplateLocation: true
+       contentType: text/html
+       suffix: .html
+       templateEncoding: UTF-8
+       templateLoaderPath: classpath:/views/
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/admineap?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: sijifeng
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    initialize: true
+    hikari:
+       cachePrepStmts: true
+       prepStmtCacheSize: 250
+       prepStmtCacheSqlLimit: 2048
+
+  jpa:
+     database: mysql
+     show-sql: true
+     hibernate:
+       ddl-auto: update
+       naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    #password: # Login password of the redis server.
+    port: 6379
+    timeout: 0
+    pool:
+      max-active: 8 #最大连接数
+      max-idle: 8 #最大空闲连接数
+      max-wait: -1 #最大等待时间
+      min-idle: 0 #初始化连接数
+  http:
+    multipart:
+      enabled: true # Enable support of multi-part uploads.
+      file-size-threshold: 4KB # Threshold after which files will be written to disk. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+      location: /tmp # Intermediate location of uploaded files.
+      max-file-size: 5Mb # Max file size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+      max-request-size: 50Mb # Max request size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+
+#mybatis:
+  #mapper-locations: classpath*:mapper/*Mapper.xml
+  #type-aliases-package: com.season.platform.web.api.model
+  #mapUnderscoreToCamelCase: true
+
+server:
+  port: 8080
+  tomcat:
+    accesslog:
+      debug: true #请求响应数据调试
+
+management:
+  security:
+      enabled: false
+
+
+logging:
+  config:
+      classpath: logback.xml
+
+upload:
+  #Disk upload
+  work-folder-name: /Users/jiyc/files #文件存储路径
+  access-url: http://127.0.0.1:8090 #文件访问地址，可使用反向代理

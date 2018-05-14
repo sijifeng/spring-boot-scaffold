@@ -1,1 +1,0 @@
-thrift -r --gen java data.thrift

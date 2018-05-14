@@ -22,7 +22,7 @@ import java.util.Map;
  * Created by jiyc on 2017/2/26.
  */
 @Controller
-@RequestMapping("/sysUser")
+@RequestMapping("/sysuser")
 public class SysUserController extends BaseController {
 	private static Logger logger = LoggerFactory.getLogger(SysUserController.class);
 	@Autowired

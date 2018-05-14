@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
     <link rel="stylesheet" href="static/plugins/ionicons-2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="static/adminlte/dist/css/AdminLTE-local.min.css">
+    <link rel="stylesheet" href="static/adminlte/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="static/adminlte/dist/css/skins/_all-skins.min.css">
       
@@ -32,11 +32,11 @@
 
 <#macro commonScript>
 	<!-- jQuery 2.1.4 -->
-	<script src="static/adminlte/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+	<script src="static/adminlte/plugins/jQuery/jQuery-2.2.0.min.js"></script>
 	<!-- Bootstrap 3.3.5 -->
 	<script src="static/adminlte/bootstrap/js/bootstrap.min.js"></script>
 	<!-- FastClick -->
-	<script src="static/adminlte/plugins/fastclick/fastclick.js"></script>
+	<script src="static/adminlte/plugins/fastclick/fastclick.min.js"></script>
 	<!-- AdminLTE App -->
 	<script src="static/adminlte/dist/js/app.min.js"></script>
 
